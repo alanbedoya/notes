@@ -9,6 +9,7 @@ Ex:
 Math.random(); //returns a number between 0 and 1
 
 
+
 Libraries
 Libraries contain methods that can be called by appending the library name with a period ., the method name, and a set of parentheses.
 Ex:
