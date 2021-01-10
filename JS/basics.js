@@ -3,6 +3,7 @@ JavaScript
 JavaScript is a programming language that powers the dynamic behavior on most websites. Alongside HTML and CSS, it is a core technology that makes the web run.
 
 
+
 Methods
 Methods return information about an object, and are called by appending an instance with a period, the mehtod name, and parentheses. 
 Ex:
@@ -16,10 +17,12 @@ Ex:
 Math.random(); //Math is the library
 
 
+
 console.log()
 The console.log() method is used to log or print messages to the console. It can also be use to print objects and other info. 
 Ex:
 console.log('Hi there!') //Prints: Hi there!
+
 
 
 Numbers
@@ -27,6 +30,7 @@ Numbers are a primitive data type. They include the set of all integers and floa
 Ex:
 let amount = 6; 
 let price = 4.99;
+
 
 
 String .length 
@@ -39,14 +43,17 @@ console.log('howdy'.length);
 // Prints: 5
 
 
+
 Data Instances
 When a new piece of data is introduced into a JavaScript program, the program keeps track of it in an instance of that data type. An instance is an individual case of a data type.
+
 
 
 Booleans
 Booleans are a primitive data type. They can be either true or false.
 Ex:
 let lateToWork = true;
+
 
 
 Math.random()
@@ -56,11 +63,13 @@ console.log(Math.random());
 // Prints: 0 - 0.9
 
 
+
 Math.floor()
 The Math.floor() function returns the largest integer less than or equal to the given number.
 Ex:
 console.log(Math.floor(5.95)); 
 // Prints: 5
+
 
 
 Single Line Comments
@@ -69,10 +78,12 @@ Ex:
 // This line will denote a comment
 
 
+
 Null
 Null is a primitive data type. It represents the intentional absence of value. In code, it is represented as null.
 Ex:
 let x = null;
+
 
 
 Strings
@@ -80,6 +91,7 @@ Strings are a primitive data type. They are any grouping of characters (letters,
 Ex:
 let single = 'Wheres my bandit hat?';
 let double = "Wheres my bandit hat?";
+
 
 
 Arithmetic Operators
@@ -102,6 +114,7 @@ Ex:
 10 % 5
 
 
+
 Multi-line Comments
 In JavaScript, multi-line comments are created by surrounding the lines with /* at the beginning and */ /*at the end. Comments are good ways for a variety of reasons like explaining a code block or indicating some hints, etc. */
 /*
@@ -114,6 +127,7 @@ changed before deployment.
 let baseUrl = 'localhost/taxwebapp/country';
 
 
+
 Remainder / Modulo Operator
 The remainder operator, sometimes called modulo, returns the number that remains after the right-hand number divides into the left-hand number as many times as it evenly can.
 Ex:
@@ -122,6 +136,7 @@ const weeksInYear = Math.floor(365/7)
 // calcuates the number of days left over after 365 is divded by 7
 const daysLeftOver = 367 % 7 
 console.log("A year has " + weeksInYear + "weeks and " + daysLeftOver + "days")
+
 
 
 Assignment Operators
@@ -139,6 +154,7 @@ console.log(number);
 // Prints: 120
 
 
+
 String Interpolation
 String interpolation is the process of evaluating string literals containing one or more placeholders (expressions, variables, etc).
 It can be performed using template literals: text ${expression} text.
@@ -150,6 +166,7 @@ let age = 7;
 `Tommy is ${age} years old.`;
 
 
+
 Variables
 Variables are used whenever there’s a need to store a piece of data. A variable contains data that can be used in the program elsewhere. Using variables also ensures code re-usability since it can be used to replace the same value in multiple places.
 Ex:
@@ -159,12 +176,14 @@ console.log(currency + userIncome + ' is more than the average income.');
 // Prints: $85000 is more than the average income.
 
 
+
 Undefined
 undefined is a primitive JavaScript value that represents lack of defined value. Variables that are declared but not initialized to a value will have the value undefined.
 Ex:
 var a;
 console.log(a); 
 // Prints: undefined
+
 
 
 Learn Javascript: Variables
@@ -178,6 +197,7 @@ console.log(name, found, age);
 // Tammy, false, 3
 
 
+
 Declaring Variables
 To declare a variable in JavaScript, any of these three keywords can be used along with a variable name:
 var is used in pre-ES6 versions of JavaScript.
@@ -187,6 +207,7 @@ Ex:
 var age;
 let weight;
 const numberOfFingers = 20;
+
 
 
 Template Literals
@@ -199,6 +220,7 @@ console.log(`Billy is ${6+8} years old.`)
 // Prints: Billy is 14 years old.
 
 
+
 let Keyword
 let creates a local variable in JavaScript & can be re-assigned. Initialization during the declaration of a let variable is optional. A let variable will contain undefined if nothing is assigned to it.
 Ex:
@@ -208,12 +230,14 @@ count = 10;
 console.log(count); // Prints: 10
 
 
+
 const Keyword
 A constant variable can be declared using the keyword const. It must have an assignment. Any attempt of re-assigning a const variable will result in JavaScript runtime error.
 Ex:
 const numberOfColumns = 4;
 numberOfColumns = 8;
 // TypeError: Assignment to constant variable.
+
 
 
 String Concatenation
