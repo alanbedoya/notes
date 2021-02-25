@@ -145,15 +145,104 @@ const {first, last} = {first: 'Alan', last: 'Bedoya};
 // });
 
 //Exercise 5
-map = function (list, callback) {
-  let storage = [];
-  for (let i = 0; i < list.length; i++) {
-    storage.push(callback(list[i], i, list));
-  }
+// map = function (list, callback) {
+//   let storage = [];
+//   for (let i = 0; i < list.length; i++) {
+//     storage.push(callback(list[i], i, list));
+//   }
 
-  return storage;
-};
+//   return storage;
+// };
 
-map([1, 2, 3], function (val) {
-  return val + 1;
-});
+// map([1, 2, 3], function (val) {
+//   return val + 1;
+// });
+
+//Exercise 6
+//We are going to want to filter by those who were present, but first we need to write our filter function:
+// const _ = {};
+// _.filter = function(array, callback) {
+//   const storage = [];
+//   for (let i = 0; i < array.length; i++) {
+//     if ( callback(array[i], i, array) === true) {
+//       storage.push(array[i])
+//     } else
+//   }
+//   return storage;
+// }
+
+//Exercise 7
+const videoData = [
+  {
+    name: 'Miss Scarlet',
+    present: true,
+    rooms: [
+      { kitchen: false },
+      { ballroom: false },
+      { conservatory: false },
+      { 'dining room': false },
+      { 'billiard room': false },
+      { library: false },
+    ],
+  },
+  {
+    name: 'Mrs. White',
+    present: false,
+    rooms: [
+      { kitchen: false },
+      { ballroom: false },
+      { conservatory: false },
+      { 'dining room': false },
+      { 'billiard room': false },
+      { library: false },
+    ],
+  },
+  {
+    name: 'Reverend Green',
+    present: true,
+    rooms: [
+      { kitchen: false },
+      { ballroom: false },
+      { conservatory: false },
+      { 'dining room': false },
+      { 'billiard room': false },
+      { library: false },
+    ],
+  },
+  {
+    name: 'Rusty',
+    present: false,
+    rooms: [
+      { kitchen: false },
+      { ballroom: false },
+      { conservatory: false },
+      { 'dining room': false },
+      { 'billiard room': false },
+      { library: false },
+    ],
+  },
+  {
+    name: 'Colonel Mustard',
+    present: true,
+    rooms: [
+      { kitchen: false },
+      { ballroom: false },
+      { conservatory: false },
+      { 'dining room': false },
+      { 'billiard room': false },
+      { library: false },
+    ],
+  },
+  {
+    name: 'Professor Plum',
+    present: true,
+    rooms: [
+      { kitchen: false },
+      { ballroom: false },
+      { conservatory: false },
+      { 'dining room': false },
+      { 'billiard room': false },
+      { library: false },
+    ],
+  },
+];
