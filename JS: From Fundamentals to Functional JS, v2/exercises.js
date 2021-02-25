@@ -13,3 +13,18 @@ game['weapons'] = [
 ];
 
 console.log(game);
+
+//ES6 Destructuring
+/*
+var obj = {first: 'Alan', last: 'Bedoya'}
+var first = obj.first;
+var last = obj.last;
+
+const {first, last} = {first: 'Alan', last: 'Bedoya};
+*/
+
+
+//Exercise 2 (Destructuring)
+{"name": "Rusty", "room":"kitchen", "weapon":"candlestick"};
+
+const {name, room, weapon} = {name: 'Rusty', room: 'kitchen', weapon: 'candlestick'};
