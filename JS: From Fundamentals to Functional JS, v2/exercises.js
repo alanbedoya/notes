@@ -26,10 +26,34 @@ const {first, last} = {first: 'Alan', last: 'Bedoya};
 //Exercise 2 (Destructuring)
 // {"name": "Rusty", "room":"kitchen", "weapon":"candlestick"};
 
-const obj = ({ person, room, weapon } = {
-  person: 'Rusty',
-  room: 'kitchen',
-  weapon: 'candlestick',
-});
+// const obj = ({ person, room, weapon } = {
+//   person: 'Rusty',
+//   room: 'kitchen',
+//   weapon: 'candlestick',
+// });
 
-console.log(obj);
+// console.log(obj);
+
+//List Transforms
+//Exercise 3
+//Loop through the suspects array
+const game = {
+  suspects: [
+    {
+      name: 'Alan',
+      color: 'Teal',
+    },
+    {
+      name: 'Emily',
+      color: 'Purple',
+    },
+  ],
+};
+
+function foo() {
+  for (let i = 0; i < game.suspects.length; i++) {
+    console.log(game.suspects[i]);
+  }
+}
+
+foo();
