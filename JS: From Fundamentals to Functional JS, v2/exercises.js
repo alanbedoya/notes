@@ -106,35 +106,35 @@ const {first, last} = {first: 'Alan', last: 'Bedoya};
 //.forEach() Function
 //Exercise 4
 //Complete the rest of this function so that it works as described in the previous slides:
-function CreateSuspectObjects(name) {
-  return {
-    name: name,
-    color: name.split(' ')[1],
-    speak() {
-      log(`my name is ${name}`);
-    },
-  };
-}
+// function CreateSuspectObjects(name) {
+//   return {
+//     name: name,
+//     color: name.split(' ')[1],
+//     speak() {
+//       log(`my name is ${name}`);
+//     },
+//   };
+// }
 
-var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
+// var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
 
-var suspectsList = [];
-for (var i = 0; i < suspects.length; i++) {
-  suspectsList.push(CreateSuspectObject(suspects[i]));
-}
+// var suspectsList = [];
+// for (var i = 0; i < suspects.length; i++) {
+//   suspectsList.push(CreateSuspectObject(suspects[i]));
+// }
 
-_.each = function (list, callback) {
-  //...TODO
-  if (Array.isArray(list)) {
-    for (var i = 0; i < list.length; i++) {
-      callback(list[i], i, list);
-    }
-  } else {
-    for (var key in list) {
-      callback(list[key], key, list);
-    }
-  }
-};
+// _.each = function (list, callback) {
+//   //...TODO
+//   if (Array.isArray(list)) {
+//     for (var i = 0; i < list.length; i++) {
+//       callback(list[i], i, list);
+//     }
+//   } else {
+//     for (var key in list) {
+//       callback(list[key], key, list);
+//     }
+//   }
+// };
 
 // _.each(['sally', 'georgie', 'porgie'], function (name, i, list) {
 //   if (list[i + 1]) {
@@ -144,4 +144,16 @@ _.each = function (list, callback) {
 //   }
 // });
 
-CreateSuspectObjects();
+//Exercise 5
+map = function (list, callback) {
+  let storage = [];
+  for (let i = 0; i < list.length; i++) {
+    storage.push(callback(list[i], i, list));
+  }
+
+  return storage;
+};
+
+map([1, 2, 3], function (val) {
+  return val + 1;
+});
