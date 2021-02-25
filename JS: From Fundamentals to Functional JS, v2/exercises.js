@@ -89,16 +89,59 @@ const {first, last} = {first: 'Alan', last: 'Bedoya};
 
 //Exercise 3-3
 //Destructure this nested data structure into two variables with the strings 'red' and 'orange'.
-var suspects = [
-  {
-    name: 'Rusty',
-    color: 'orange',
-  },
-  {
-    name: 'Miss Scarlet',
-    color: 'red',
-  },
-];
+// var suspects = [
+//   {
+//     name: 'Rusty',
+//     color: 'orange',
+//   },
+//   {
+//     name: 'Miss Scarlet',
+//     color: 'red',
+//   },
+// ];
 
-let [color, color2] = [suspects[0].color, suspects[1].color];
-console.log(color, color2);
+// let [color, color2] = [suspects[0].color, suspects[1].color];
+// console.log(color, color2);
+
+//.forEach() Function
+//Exercise 4
+//Complete the rest of this function so that it works as described in the previous slides:
+function CreateSuspectObjects(name) {
+  return {
+    name: name,
+    color: name.split(' ')[1],
+    speak() {
+      log(`my name is ${name}`);
+    },
+  };
+}
+
+var suspects = ['Miss Scarlet', 'Colonel Mustard', 'Mr. White'];
+
+var suspectsList = [];
+for (var i = 0; i < suspects.length; i++) {
+  suspectsList.push(CreateSuspectObject(suspects[i]));
+}
+
+_.each = function (list, callback) {
+  //...TODO
+  if (Array.isArray(list)) {
+    for (var i = 0; i < list.length; i++) {
+      callback(list[i], i, list);
+    }
+  } else {
+    for (var key in list) {
+      callback(list[key], key, list);
+    }
+  }
+};
+
+// _.each(['sally', 'georgie', 'porgie'], function (name, i, list) {
+//   if (list[i + 1]) {
+//     console.log(name, 'is younger than', list[i + 1]);
+//   } else {
+//     console.log(name, 'is the oldest.');
+//   }
+// });
+
+CreateSuspectObjects();
