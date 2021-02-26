@@ -160,7 +160,7 @@ const {first, last} = {first: 'Alan', last: 'Bedoya};
 
 //Exercise 6
 //We are going to want to filter by those who were present, but first we need to write our filter function:
-// const _ = {};
+const _ = {};
 // _.filter = function(array, callback) {
 //   const storage = [];
 //   for (let i = 0; i < array.length; i++) {
@@ -246,3 +246,7 @@ const videoData = [
     ],
   },
 ];
+
+filter(videoData, function (subspectObject) {
+  return subspectObject.present;
+});
