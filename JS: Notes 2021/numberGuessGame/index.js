@@ -31,20 +31,11 @@ document.querySelector('.check').addEventListener('click', function () {
       highScore = score;
       document.querySelector('.highscore').textContent = highScore;
     }
-    //If Guess is too high
-  } else if (guess > randomNum) {
+    // If guess is wrong.
+  } else if (guess !== randomNum) {
     if (score > 2) {
-      document.querySelector('.message').textContent = 'Guess is too high!';
-      score -= 2;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = 'You lost the game.';
-      document.querySelector('.score').textContent = 0;
-    }
-    //If Guess is too low
-  } else if (guess < randomNum) {
-    if (score > 2) {
-      document.querySelector('.message').textContent = 'Guess is too low!';
+      document.querySelector('.message').textContent =
+        guess > randomNum ? 'Guess is too high!' : 'Guess is too low!';
       score -= 2;
       document.querySelector('.score').textContent = score;
     } else {
@@ -54,6 +45,7 @@ document.querySelector('.check').addEventListener('click', function () {
   }
 });
 
+//When the Again button is clicked
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
   randomNum = Math.trunc(Math.random() * 20) + 1;
