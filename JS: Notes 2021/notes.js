@@ -13,4 +13,6 @@ console.log('Notes');
 
  //classList
  When wrting a classList remove or add make sure to not put a '.' in front of the class becuase you're not selecting the class you're calling it.
+
+ //
 */
