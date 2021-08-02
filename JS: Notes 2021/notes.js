@@ -20,5 +20,8 @@ console.log('Notes');
 -=	Subtraction assignment	Subtracts the value on the right from the variable value on the left, and returns the new variable value	x -= 3;	x = x - 3;
 *=	Multiplication assignment	Multiplies the variable value on the left by the value on the right, and returns the new variable value	x *= 3;	x = x * 3;
 /=	Division assignment	Divides the variable value on the left by the value on the right, and returns the new variable value	x /= 5;	x = x / 5;
- //
+
+
+ //toogle()
+ It adss a class if it's not there or it will remove it. Ex: player0Element.classList.toggle('player--acitve);
 */
