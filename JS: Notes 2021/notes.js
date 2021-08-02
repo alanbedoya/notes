@@ -24,4 +24,32 @@ console.log('Notes');
 
  //toogle()
  It adss a class if it's not there or it will remove it. Ex: player0Element.classList.toggle('player--acitve);
+
+
+ //High-level overview of JS
+  * JS
+    * JS is a high-level, object-oriented, multi-paradigm programming language.
+  * High-level
+    * Everything happens automatically
+  * Garbage-collected 
+    * Cleaning the memory so we don't have to
+  * Interpreted or just-in-time compiled
+    * Converts code to machine code (1's & 0's) to be complied. Happens inside the JS engine.
+  * Multi-paradigm
+    * Paradigm:
+      * An approach and mindset of structuring code, which will direct your coding style and technique. 
+      *  1)Procedural programming
+      *  2)Object-oriented progrmaing (OOP)
+      *  3)Functional programming (FP)
+      * Imerative or Declarative 
+  * Prototype-based object-oriented 
+    *  More on it in the OOP section.
+  * First-class functions 
+    * In a language with first-class functions, functions are simply treated as variables. We can pass them into other functions, and return them from functions. 
+  * Single-threaded & Non-blocking event loop 
+    * Concurrency model: how the JS engine handles multiple tasks happening at the same time.
+    * JS runs in one single thread, so it can only do one thing at a time.
+    * Sounds like it would block the single thread. However, we want non-blocking behavior.
+    * By using an event loop it takes long running tasks, executes thme in the background, and puts them back in the main thread once they are finished.  
+
 */
