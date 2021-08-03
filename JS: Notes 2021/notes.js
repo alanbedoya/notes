@@ -52,4 +52,33 @@ console.log('Notes');
     * Sounds like it would block the single thread. However, we want non-blocking behavior.
     * By using an event loop it takes long running tasks, executes thme in the background, and puts them back in the main thread once they are finished.  
 
+
+ //The JS Engine and Runtime
+ * Compilation vs. Interpretation 
+  * Compilation:
+    * Entire code is converted into machine code at once, and written to a binary file that can be executed by a computer. 
+      * See Video 90 for EX. 
+  * Interpreetaion:
+    * Interpreter runs through the source code and executes it line by line. 
+      * See Video 90 for EX. 
+  * Just-in-time (JIT) compilation
+    * Entire code is converted into machine code at once, then executed immediately. 
+      * See Video 90 for EX.    
+  *JS engine
+    * 1) Parsing 
+    * 2) Compilaton
+    * 3) Execution 
+      * Happens in the Call Stack
+    * 4) Optimization
+
+  
+//Execution contexts and The Call Stack 
+* What is an execution context? 
+  * Execution Context: 
+   * Environment in which a piece of JS is executed. Stores all the necessary information for some code to be executed.
+  * Execution steps: 
+    * Compilation
+    * Creation of global execution context (for top-level code)
+    * 
+
 */
