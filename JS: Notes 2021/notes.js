@@ -93,6 +93,58 @@ console.log('Notes');
   * Scope chain
   * this keyword
     * Generated during "creation phase", right before execution    
-*
+* The Call Stack
+  * "Place" where execution contexts get stacked on top of each other, to keep track of where we are in the execution. 
+  * Like a map. 
+  
+
+//Scope and The Scope Chain
+* Scope Concepts 
+  * Scoping:
+    * How our program's variables are organized and accessed. "Where do variables live?" or "Where can we access a certain variable, and where not?" 
+  * Lexical Scoping:
+    * Scoping is controlled by placement of functions and blocks in the code. 
+  * Scope: 
+    * Space or environment in which a certain variable is declared(variable environment in case of functions). There is a global scope, function scope, and block scope.
+  * Scope of a variable: 
+    * Region of our code where a certain variable can be accessed. 
+* The 3 types of scope
+  * Global Scope
+    * Outside of any function or block
+    * Variables declared in global scope are accessible everywhere
+  * Function Scope
+    * Variables are accessible only inside function, NOT outside
+    * Also called local scope 
+  * Block Scope (ES6)
+    * Variables are accessible only inside blcok(block scoped)
+    * However, this only applies to let and const variables!
+    * Functions are also block scoped (only in strict mode)
+* The Scope chain
+  * Scopes have access to variables from all outer scopes. 
+  * Variables in scope chain only look up the chain not down. 
+  * let and const are block-scoped 
+  * var is a function-scoped
+* summary
+  * Scoping asks the question "Where do variables live?" or "Where can we access a certain variable, and where not?"
+  * There are 3 types of scope in JS: the global scope, scopes defined by functions, and scopes defined by blocks. 
+  * only let and const variables are block-scoped. Variables declared with var end up in the closest function scope. 
+  * In JS, we have lexical scoping, so the rules of where we can access variables are based on exactly where in the code functions and blocks are written.
+  * Every scope always has access to all the variables from all its outer scops. This is the scope chain!
+  * When a vairable is not in the current scope, the engine looks up in the scope chain unitl it finds the variable it's looking for. This is called variable lookup.
+  * The scope chian is a one-way street: a scope will never, ever have access to the variables of an inner scope. 
+  * The scope chain is a certain scope is equal to adding together all the variable environments of the all parent scopes.
+  * The scope chain has nothing to do with the order in which functions were called. It does not affet the scope chain at all!
+
+
+//Scoping in Practice 
+
+
+
+
+
+
+
+
+
 
 */
