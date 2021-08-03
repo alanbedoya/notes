@@ -161,6 +161,35 @@ const firstName = 'Alan';
 calcAge(1993);
 
 
+//Variable Environment: Hoisting and The TDZ
+* Hoisting in JS 
+  * Hoisting
+    * Makes some type of variables accessible/usable in the code before they are actually declared. "Variables lifted to the top of their scope."
+    * Before execution, code is scanned for variable declarations, and for each variable, a new property is created in the variable environment object. 
+    * Function declarations
+      * Hoisted: Yes
+      * Initial Value: Actual function
+      * Scope: Block (In strict mode. Otherwise the scope is function.)
+    * Var variables 
+      * Hoisted: Yes
+      * Initial Value: Undefined
+      * Scope: Function
+    * Let and Const variables 
+      * Hoisted: No
+      * Initial Value: <uniitialized>, TDZ(Temporal Dead Zone)
+      * Scope: Block
+    * Function expressions and arrows 
+      * Depends if using var or let/const  
+      * Hoisted: ?
+      * Initial Value: ?
+      * Scope: ?  
+  * Why TDZ?
+    * Makes it easier to avoid and catch errors: accessing variables before declaration is bad practice and should be avoided. 
+    * Makes const variables actually work. 
+  * Why Hoisting?
+    * Using functions before actual declaration. 
+    * var Hoisting is just a byproduct   
+
 
 
 
