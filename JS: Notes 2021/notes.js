@@ -79,6 +79,20 @@ console.log('Notes');
   * Execution steps: 
     * Compilation
     * Creation of global execution context (for top-level code)
-    * 
+    * Execution of top-level code 
+    * Execution of functions and waiting for callbacks
+* Exactly one global execution context (EC):
+  * Default context, created for code that is not inside any function (top-level). 
+* One execution context per function: 
+  * For each function call, a new execution context is created. 
+* What's inside execution context?
+  * Variable Environment 
+    * let, const, and var declarations
+    * functions
+    * arguments object 
+  * Scope chain
+  * this keyword
+    * Generated during "creation phase", right before execution    
+*
 
 */
