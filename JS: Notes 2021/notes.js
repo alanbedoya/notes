@@ -250,12 +250,40 @@ calcAge(1993);
   * this does NOT point to the function itself, and also NOT the its variable environment! 
 
 
-// Regular functions vs arrow functions
+// Primitives vs Objects (Primitive vs Reference Types)
 * Example:
-  *
+  * let age = 30;
+    let oldAge = age;
+    age = 31;
+    console.log(age);
+    console.log(oldAge);
+
+    const me = {
+      name: 'Alan',
+      age: 30,
+    };
+
+    const friend = me;
+    friend.age = 27;
+    console.log('Friend:', friend);
+    console.log('Me:', me);
 
 
+//Primitive vs Objects in practice
+*Object.assign()
+  * The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
+  * Example:
+    * const target = { a: 1, b: 2 };
+      const source = { b: 4, c: 5 };
 
+      const returnedTarget = Object.assign(target, source);
+
+      console.log(target);
+      // expected output: Object { a: 1, b: 4, c: 5 }
+
+      console.log(returnedTarget);
+      // expected output: Object { a: 1, b: 4, c: 5 }
+  * Only works on the first level. Creates a shallow copy not a deep copy. Deep copy would copy everything. 
 
 
 
@@ -280,19 +308,3 @@ calcAge(1993);
 
 
 */
-
-let age = 30;
-let oldAge = age;
-age = 31;
-console.log(age);
-console.log(oldAge);
-
-const me = {
-  name: 'Alan',
-  age: 30,
-};
-
-const friend = me;
-friend.age = 27;
-console.log('Friend:', friend);
-console.log('Me:', me);
