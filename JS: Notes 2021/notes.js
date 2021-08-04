@@ -222,6 +222,57 @@ calcAge(1993);
       const addArrow = (a, b) => a + b;   
 
 
+//The this Keyword
+* How the this keyword works
+  * this keyword/variable: 
+    * Special variable that is created for every execution context (every function). It takes the value of (points to) the "owner" of the function in which the this keyword is used. 
+  * this is NOT static. It depends on how the function is called, and its value is only assigned when the function is actually called. 
+  * Method
+    * this = <Object that is calling the method>
+    * const
+    * const alan = {
+        name: 'Alan',
+        year: 1993,
+        calcAge: () => {
+          return 2037 - this.year;
+        },
+      };
+      alan.calcAge();
+  * Simple function call
+    * this = undefined
+      * only in stric mode! Otherwise: window (in the browser)
+  * Arrow functions
+    * this = <this of surrounding function (lexical this)>
+  * Event listener 
+    * this = <DOM element that the handler is attached to>
+  * new, call apply, bind
+    * Will learn more latter. 
+  * this does NOT point to the function itself, and also NOT the its variable environment! 
+
+
+// Regular functions vs arrow functions
+* Example:
+  *
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -229,3 +280,19 @@ calcAge(1993);
 
 
 */
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+  name: 'Alan',
+  age: 30,
+};
+
+const friend = me;
+friend.age = 27;
+console.log('Friend:', friend);
+console.log('Me:', me);
