@@ -229,7 +229,6 @@ calcAge(1993);
   * this is NOT static. It depends on how the function is called, and its value is only assigned when the function is actually called. 
   * Method
     * this = <Object that is calling the method>
-    * const
     * const alan = {
         name: 'Alan',
         year: 1993,
@@ -286,6 +285,46 @@ calcAge(1993);
   * Only works on the first level. Creates a shallow copy not a deep copy. Deep copy would copy everything. 
 
 
+//Destructuring Arrays
+* Destructuring Ex:
+    * const arr = [2, 3, 4];
+      const [x, y, z] = arr;
+      console.log(x, y, z);
+      output: 2 3 4
+* Ex:
+      * const resturant = {
+          name: 'Pizza Shop',
+          location: 'LA, CA',
+          categories: ['Pizza', 'Salad', 'Pasta'],
+          starterMenu: ['Garlic Bread', 'Wings', 'Ceaser Salad'],
+          mainMenu: ['Pizza', 'Salad', 'Pasta'],
+        
+          order: function (starterIndex, mainIndex) {
+            return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+          },
+        };    
+
+        let [main, , secondary] = resturant.categories;
+        console.log(main, secondary);
+
+    * Switching Variables
+      * [main, secondary] = [secondary, main];
+        console.log(main, secondary);
+
+    * Receive 2 return values from a function
+      * const [starterCourse, mainCourse] = resturant.order(2, 0);
+        console.log(starterCourse, mainCourse);
+
+    * Nested destructuring
+      * const nested = [2, 4, [5, 6]];
+        const [i, , j] = nested;
+        console.log(i, j); 
+        const [i, , [j, k]] = nested;
+        console.log(i, j, k); 
+    
+    * Default Values
+      * const [p, q, r = 6] = [8, 9];
+        console.log(p, q, r);
 
 
 
@@ -305,6 +344,33 @@ calcAge(1993);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 
 
 */
