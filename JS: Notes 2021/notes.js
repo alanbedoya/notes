@@ -492,3 +492,25 @@ const restaurant = {
     );
   },
 };
+
+const arr = [7, 8, 9];
+const theBadWay = [1, 2, arr[0], arr[1], arr[2]];
+console.log(theBadWay);
+
+const theRightWay = [1, 2, ...arr];
+console.log(theRightWay);
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+//Copy Array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+
+//Iterables: arrays, strings, maps, sets. NOT objects
+const str = 'Alan';
+const letters = [...str, ' ', 'B.'];
+console.log(letters);
